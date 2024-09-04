@@ -1,0 +1,239 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Heebo', sans-serif;
+    user-select:none;
+  }
+  
+  
+  .body{
+    width:100vw;
+    height:100vh;
+    background:#444;
+    position:relative;
+    overflow:hidden;
+    perspective: 600px;
+    font-weight: 100;
+  }
+  
+  
+  .modelName{
+    position:absolute;
+    top:10px;
+    left:10px;
+    font-size:1.2em;
+    color:#eee;
+    text-transform:capitalize;
+  }
+  
+  
+  input[type=range][orient=vertical]
+  {
+      position:absolute;
+      bottom:20px;
+      left:20px;
+      writing-mode: bt-lr; /* IE */
+      -webkit-appearance: slider-vertical; /* Chromium */
+      width: 8px;
+      height: 175px;
+      padding: 0 5px;
+      
+      
+  }
+  
+  .range{
+    accent-color:#000;
+  }
+  
+  
+  .laptop{
+    width:100%;
+    height:100%;
+    position:relative;
+    transform-style: preserve-3d;
+    transform:rotateX(60deg) rotateY(160deg);
+  }
+  
+  
+  .base-top,
+  .base-bottom,
+  .base-front,
+  .base-back,
+  .base-left,
+  .base-right{
+    width:200px;
+    height:150px;
+    position:absolute;
+      top: calc(50% - 25px);
+      left: calc(50% - 100px);
+    background:#333;
+  }
+  
+  
+  .base-top{
+    background:#222;
+    transform:translateZ(6px);
+    
+    
+  }
+  
+  
+  .base-bottom{
+    transform:translateZ(0px) rotateY(180deg);
+    background-image: url(https://i.pinimg.com/originals/25/d2/bc/25d2bc76457d9b63fe884f3281596ff4.png);
+       background-size: 190px auto;
+      background-repeat: no-repeat;
+      background-position: center 15px;
+  }
+  
+  
+  .base-bottom:before{
+        position: absolute;
+          content: "";
+          width: 50px;
+          height: 30px;
+      background-color: #bbb;
+          border-radius: 2px;
+          bottom: 8px;
+      left:calc(50% - 25px);
+  }
+  
+  
+  .base-front,
+  .base-back{
+      height: 6px;
+    background:#222;
+  }
+  
+  .base-front{
+    transform:rotateX(90deg) translateZ(3px) translateY(3px);
+    
+  }
+  
+  .base-back{
+      transform:rotateX(90deg) translateZ(-147px) translateY(3px);
+  }
+  
+  
+  .base-left,
+  .base-right{
+      height: 6px;
+    width: 150px;
+    background:#222;
+  }
+  
+  .base-left{
+   transform: rotateY(90deg) rotateZ(90deg) translateZ(125px) translateX(72px) translateY(3px);
+  }
+  
+  .base-right{
+    transform:rotateY(90deg) rotateZ(90deg) translateZ(-74px) translateX(72px) translateY(3px);
+  }
+  
+  
+  
+  .screen{
+    position:absolute;
+    top:calc(50% - 175px);
+    left:calc(50% - 100px);
+    width:200px;
+    height:150px;
+    transform-style: preserve-3d;
+      transition: all .5s;
+    transform-origin: bottom left;
+    transform: rotateX(80deg);
+  
+    
+  }
+  
+  
+  .screenLaptop{
+    transform: rotateX(180deg);
+  }
+  
+  
+  .screen-front,
+  .screen-back{
+      width: 200px;
+      height: 150px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    background:#333;
+  }
+  
+  
+  .screen-front{
+    background:#222;
+    background:url(https://www.microsoft.com/en-us/microsoft-365/blog/wp-content/uploads/sites/2/2021/06/WIN_CML_Start_Dark_16x9_en-US.png);
+    
+    background-size:cover;
+    background-repeat: no-repeat;
+      background-position: center;
+    overflow: hidden;
+      backface-visibility: hidden;
+      transform: rotateY(180deg);
+  }
+  
+  
+  
+  .screen-back{
+      background-color:#222;
+      transform: translateZ(3px);
+      background-image: url(https://realgamers.asia/image/she2me/image/data/brand/acer.png);
+      background-size: 65px 50px;
+      background-repeat: no-repeat;
+      background-position: center;
+    
+  }
+  
+  
+  .screen-left,
+  .screen-right{
+    position:absolute;
+    top:0;
+    left:0;
+    width:3px;
+    height:150px;
+    background:#111;
+    
+  }
+  
+  
+  
+  .screen-left{
+    transform:rotateY(90deg) translateX(-1.5px) translateZ(198.5px);
+  }
+  
+  
+  .screen-right{
+    transform:rotateY(90deg) translateX(-1.5px);
+  }
+  
+  
+  .screen-bottom,
+  .screen-top{
+    position:absolute;
+    top:0;
+    left:0;
+    width:200px;
+    height:3px;
+    background:#333;
+  }
+  
+  
+  .screen-bottom{
+    transform:rotateX(90deg) translateZ(-148px) translateY(1.2px);
+    
+  }
+  
+  
+  .screen-top{
+    transform:rotateX(90deg) translateY(1.2px) translateZ(1.5px);
+  }
+  
+  
+  
+  
+  
